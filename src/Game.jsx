@@ -3,9 +3,7 @@ import React from 'react';
 export default function Game() {
   return (
     <div style={{ padding: 20 }}>
-      <h1>Goose, Kabanos and the Evil Wolf</h1>
-      <p>// Goose, Kabanos and the Evil Wolf - Enhanced Maze Game with Dense Branching and Fixes
-import React, { useEffect, useState } from "react";
+      <h1>Goose, Kabanos and the Evil Wolf </h1>
 
 const GRID_SIZE = 21;
 const MAX_LEVELS = 40;
