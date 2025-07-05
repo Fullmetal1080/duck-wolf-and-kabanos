@@ -5,10 +5,11 @@ export default function Game() {
     <div style={{ padding: 20 }}>
       <h1>Goose, Kabanos and the Evil Wolf </h1>
 
-const GRID_SIZE = 21;
-const MAX_LEVELS = 40;
-
-const generateMaze = () => {
+    import React, { useEffect, useState } from "react";
+    const GRID_SIZE = 21;
+    const MAX_LEVELS = 40;
+  
+  const generateMaze = () => {
   const maze = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(1));
 
   const carve = (x, y) => {
