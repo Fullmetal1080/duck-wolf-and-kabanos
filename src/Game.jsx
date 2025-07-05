@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const GRID_SIZE = 21;
 const MAX_LEVELS = 40;
@@ -14,11 +14,7 @@ const generateMaze = () => {
 
     for (const [dx, dy] of directions) {
       const nx = x + dx, ny = y + dy;
-      if (
-        nx > 0 && nx < GRID_SIZE - 1 &&
-        ny > 0 && ny < GRID_SIZE - 1 &&
-        maze[ny][nx] === 1
-      ) {
+      if (nx > 0 && nx < GRID_SIZE - 1 && ny > 0 && ny < GRID_SIZE - 1 && maze[ny][nx] === 1) {
         maze[y + dy / 2][x + dx / 2] = 0;
         carve(nx, ny);
       }
@@ -26,16 +22,11 @@ const generateMaze = () => {
   };
 
   carve(1, 1);
-
-  // Add extra junctions
   for (let i = 0; i < 40; i++) {
     const x = Math.floor(Math.random() * (GRID_SIZE - 2)) + 1;
     const y = Math.floor(Math.random() * (GRID_SIZE - 2)) + 1;
-    if (maze[y][x] === 1 && (x % 2 === 1 || y % 2 === 1)) {
-      maze[y][x] = 0;
-    }
+    if (maze[y][x] === 1 && (x % 2 === 1 || y % 2 === 1)) maze[y][x] = 0;
   }
-
   return maze;
 };
 
