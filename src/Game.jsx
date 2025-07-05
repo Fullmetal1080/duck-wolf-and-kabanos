@@ -1,15 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-export default function Game() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Goose, Kabanos and the Evil Wolf </h1>
+const GRID_SIZE = 21;
+const MAX_LEVELS = 40;
 
-    import React, { useEffect, useState } from "react";
-    const GRID_SIZE = 21;
-    const MAX_LEVELS = 40;
-  
-  const generateMaze = () => {
+const generateMaze = () => {
   const maze = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(1));
 
   const carve = (x, y) => {
@@ -205,10 +199,6 @@ export default function Game() {
         )}
       </div>
       {gameOver && <p className="text-red-600 mt-4 font-bold">המשחק נגמר! השלב מתחיל מחדש...</p>}
-    </div>
-  );
-}
-.</p>
     </div>
   );
 }
